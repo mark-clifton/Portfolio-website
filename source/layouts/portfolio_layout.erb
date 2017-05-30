@@ -1,0 +1,22 @@
+<% wrap_layout :layout do %>
+<header class="project-overview">
+	<section class="context">
+		<h2>Agency</h2>
+		<p><%= current_page.data.agency %></p>
+	</section>
+	<section class="roles">
+		<h2>Roles</h2>
+		<ul>
+			<% current_page.data.roles.each do |f| %>
+			<li><%= f %></li>
+			<% end %>
+		</ul>
+	</section>
+	<section class="context">
+		<h2>Period</h2>
+		<p><%= current_page.data.years %></p>
+	</section>
+</header>
+<%= yield %>
+<%= partial '/partials/pagination' %>
+<% end %>

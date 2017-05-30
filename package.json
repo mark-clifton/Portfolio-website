@@ -1,0 +1,18 @@
+{
+  "name": "mark-clifton-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website of Mark Clifton.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "portfolio",
+    "website"
+  ],
+  "author": "Mark Clifton",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp-uncss": "^1.0.6"
+  }
+}

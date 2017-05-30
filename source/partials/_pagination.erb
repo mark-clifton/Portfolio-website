@@ -1,0 +1,18 @@
+<nav class="pagination">
+	<ul>
+	<% if current_page.data.order > 1 %>
+		<li>
+			<% link_to adjacent_page('url', 'previous'), :class => 'button' do %>
+				<span role="presentation">← </span><%= adjacent_page('headline', 'previous') %>
+			<% end %>
+		</li>
+	<% end %>
+	<% if current_page.data.order < (current_page.siblings.count + 1) # + 1 to include current page in the count %>
+		<li>
+			<% link_to adjacent_page('url', 'next'), :class => 'button' do %>
+				<%= adjacent_page('headline', 'next') %><span role="presentation"> →</span>
+			<% end %>
+		</li>
+	<% end %>
+	</ul>
+</nav>

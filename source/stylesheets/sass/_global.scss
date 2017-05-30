@@ -1,0 +1,28 @@
+/* Breakpoints */
+$break-1: 30rem;
+$break-2: 43rem;
+$break-3: 50rem;
+$break-4: 80rem;
+$break-5: 100rem;
+
+/* Colors */
+$neutral-color: #e0e5e9; // Light cool gray
+
+/* Font weights */
+$normal: 400;
+$bold: 700;
+$black: 800;
+
+/* Containers */
+$content-width: $unit * 25; // Max width for text containers, for readability
+$header-height: $unit * 1.75; // Fixed header height
+
+/* Helpers */
+@mixin no-child-margins { // Prevents extra vertical padding in containers due to margins of elements within
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,28 @@
+<ul>
+	<% sort_pages('portfolio').each do |page| # Output a list of all portfolio pages using the sort_pages helper %>
+		<li>
+			<div>
+				<% link_to page.url do %>
+					<div class="img-wrapper" style="padding-bottom: 33.3%;">
+						<img sizes="(min-width: 30rem) calc(50vw - 4.854rem),
+								calc(100vw - 3.236rem)"
+							data-original-set="/images/portfolio/<%= page.data.thumb %>/thumb-320.jpg 320w,
+								/images/portfolio/<%= page.data.thumb %>/thumb-640.jpg 640w,
+								/images/portfolio/<%= page.data.thumb %>/thumb-960.jpg 960w,
+								/images/portfolio/<%= page.data.thumb %>/thumb-1500.jpg 1500w"
+							data-original="/images/portfolio/<%= page.data.thumb %>/thumb-960.jpg"
+							alt="<%= page.data.headline %>">
+					</div>
+					<div class="portfolio-details">
+						<h3><%= page.data.headline %></h3>
+						<ul>
+							<% page.data.roles.each do |role| %>
+								<li><%= role %></li>
+							<% end %>
+						</ul>
+					</div>
+				<% end %>
+			</div>
+		</li>
+	<% end %>
+</ul>

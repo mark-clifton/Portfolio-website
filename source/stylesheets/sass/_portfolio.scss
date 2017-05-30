@@ -1,0 +1,337 @@
+/* Project overview */
+.project-overview {
+	border-bottom: solid medium black;
+	section {
+		margin-bottom: $unit * .5;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	h2, ul, p {
+		margin: 0;
+	}
+	h2 {
+		font-size: $level-0;
+		line-height: $unit;
+		font-weight: $black;
+		min-width: 4.5rem;
+		float: left;
+	}
+	ul, p {
+		padding-left: 4.5rem + ($unit * .5);
+	}
+	li {
+		display: inline;
+		list-style: none;
+		&:after {
+			content: ', ';
+			display: inline;
+		}
+		&:last-child {
+			&:after {
+				content: '';
+				display: none;
+			}
+		}
+	}
+}
+
+/* Project details */
+.img-full, .img-wide, .img-right, .img-left {
+	clear: both;
+	img, video, figcaption {
+		width: 100%;
+		max-width: 100rem;
+	}
+}
+.img-right, .img-left {
+	&.img-small {
+		max-width: 8rem;
+	}
+}
+.img-wide {
+	padding-right: $unit;
+	padding-left: $unit;
+}
+.bg-alt {
+	background-color: $neutral-color;
+	clear: both;
+}
+
+/* Pagination */
+.pagination {
+	clear: both;
+	padding: $unit;
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+		}
+	}
+}
+
+@media only screen and (min-width: $break-1) {
+
+	/* Hero */
+	.portfolio_beyond-indigo {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/beyond-indigo/header-sm.jpg');
+			}
+		}
+	}
+	.portfolio_the-lawrence {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/the-lawrence/header-sm.jpg');
+			}
+		}
+	}
+	.portfolio_credant {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/credant/header-sm.jpg');
+			}
+		}
+	}
+	.portfolio_cardo {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/cardo/header-sm.jpg');
+			}
+		}
+	}
+	.portfolio_wako-diagnostics {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/wako-diagnostics/header-sm.jpg');
+			}
+		}
+	}
+	.portfolio_tropical-floors-and-doors {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/tropical-floors-and-doors/header-sm.jpg');
+			}
+		}
+	}
+	.portfolio_rosevine-winery {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/rosevine-winery/header-sm.jpg');
+			}
+		}
+	}
+	.portfolio_concierge-mobile-animal-hospital {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/concierge-mobile-animal-hospital/header-sm.jpg');
+			}
+		}
+	}
+
+	/* Project overview */
+	.project-overview {
+		li {
+			white-space: nowrap;
+		}
+	}
+
+	/* Project details */
+	.img-wide {
+		padding-right: 0;
+		padding-left: 0;
+		img, video, figcaption {
+			margin-right: auto;
+			margin-left: auto;
+		}
+		figcaption {
+			padding-left: $unit;
+			padding-right: $unit;
+		}
+	}
+	.img-right, .img-left {
+		padding-top: $unit;
+		&.img-small {
+			width: 33%;
+			max-width: none;
+		}
+	}
+	h2 {
+		+ .img-right, + .img-left {
+			padding-top: 0;
+		}
+	}
+	.img-right {
+		float: right;
+		clear: right;
+		width: 50%;
+		margin: .375em 0 ($unit * 2) ($unit * 2);
+	}
+	.img-left {
+		float: left;
+		clear: left;
+		width: 50%;
+		margin: .375em ($unit * 2) ($unit * 2) 0;
+	}
+
+	/* Pagination */
+	.pagination {
+		ul {
+			display: flex;
+			justify-content: space-around;
+			li {
+				width: 50%;
+				&:first-child {
+					padding-right: $unit * .5;
+				}
+				&:last-child {
+					padding-left: $unit * .5;
+				}
+				.button {
+					display: block;
+				}
+			}
+		}
+	}
+
+}
+
+@media only screen and (min-width: $break-3) {
+
+	/* Hero */
+	.portfolio_beyond-indigo {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/beyond-indigo/header-med.jpg');
+			}
+		}
+	}
+	.portfolio_the-lawrence {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/the-lawrence/header-med.jpg');
+			}
+		}
+	}
+	.portfolio_credant {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/credant/header-med.jpg');
+			}
+		}
+	}
+	.portfolio_cardo {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/cardo/header-med.jpg');
+			}
+		}
+	}
+	.portfolio_wako-diagnostics {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/wako-diagnostics/header-med.jpg');
+			}
+		}
+	}
+	.portfolio_tropical-floors-and-doors {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/tropical-floors-and-doors/header-med.jpg');
+			}
+		}
+	}
+	.portfolio_rosevine-winery {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/rosevine-winery/header-med.jpg');
+			}
+		}
+	}
+	.portfolio_concierge-mobile-animal-hospital {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/concierge-mobile-animal-hospital/header-med.jpg');
+			}
+		}
+	}
+
+	/* Project details */
+	.img-full {
+		margin-right: $unit * -3;
+		margin-left: $unit * -3;
+	}
+	.img-right {
+		margin-left: $unit * -1;
+		right: $unit * -3;
+	}
+	.img-left {
+		margin-right: $unit * -1;
+		left: $unit * -3;
+	}
+
+}
+
+@media only screen and (min-width: $break-4) {
+
+	/* Hero */
+	.portfolio_beyond-indigo {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/beyond-indigo/header-lg.jpg');
+			}
+		}
+	}
+	.portfolio_the-lawrence {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/the-lawrence/header-lg.jpg');
+			}
+		}
+	}
+	.portfolio_credant {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/credant/header-lg.jpg');
+			}
+		}
+	}
+	.portfolio_cardo {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/cardo/header-lg.jpg');
+			}
+		}
+	}
+	.portfolio_wako-diagnostics {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/wako-diagnostics/header-lg.jpg');
+			}
+		}
+	}
+	.portfolio_tropical-floors-and-doors {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/tropical-floors-and-doors/header-lg.jpg');
+			}
+		}
+	}
+	.portfolio_rosevine-winery {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/rosevine-winery/header-lg.jpg');
+			}
+		}
+	}
+	.portfolio_concierge-mobile-animal-hospital {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/concierge-mobile-animal-hospital/header-lg.jpg');
+			}
+		}
+	}
+
+}

@@ -1,0 +1,270 @@
+/* Hero */
+body.index {
+	.page-title {
+		h1 {
+			span {
+				display: block;
+			}
+		}
+	}
+}
+
+/* Intro */
+.intro {
+	color: white;
+	background-color: black;
+}
+
+/* Portfolio */
+.portfolio-list {
+	padding: $unit * .5;
+	h2 {
+		margin: 0;
+		padding: $unit * .5;
+	}
+	h3, p {
+		margin: 0;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+		}
+	}
+	> ul {
+		> li {
+			padding: $unit * .5;
+			> div {
+				background-color: white;
+				width: 100%;
+			}
+			a {
+				display: block;
+				border-bottom: none;
+				&:after {
+					content: '';
+					display: block;
+					width: 100%;
+					border-bottom: solid medium black;
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+				&:hover {
+					&:after {
+						border-bottom-width: thick;
+					}
+				}
+				.portfolio-details {
+					padding: ($unit * .25) 0 ($unit * .75) 0;
+				}
+				ul {
+					font-size: $level-neg-1;
+					line-height: $unit * .5;
+					display: block;
+					margin-top: $unit * .25;
+					li {
+						display: inline;
+						white-space: nowrap;
+						&:after {
+							content: ', ';
+							display: inline;
+						}
+						&:last-child {
+							&:after {
+								display: none;
+							}
+						}
+					}
+				}
+			}
+			img {
+				height: auto;
+				width: 100%;
+			}
+		}
+	}
+}
+.additional-links {
+	section {
+		padding: $unit;
+	}
+	h3 {
+		margin-bottom: 0;
+	}
+	p {
+		margin-top: 0;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+		}
+	}
+}
+
+/* Contact */
+.contact-info {
+	font-size: $level-1;
+	line-height: $unit * 1.5;
+	color: white;
+	background-color: black;
+	a {
+		border-bottom-color: white;
+	}
+	.button {
+		color: white;
+		background-color: black;
+		border-color: white;
+		&:hover {
+			color: black;
+			background-color: white;
+			.icon {
+				polygon, path {
+					fill: black;
+				}
+			}
+		}
+	}
+	.icon, .social-icon {
+		polygon, path {
+			fill: white;
+		}
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		li {
+			list-style: none;
+			margin: $unit 0;
+		}
+	}
+	.social {
+		li {
+			display: inline;
+			margin: 0 ($unit * .25) ($unit * .25) 0;
+		}
+		a {
+			border-bottom: none;
+		}
+	}
+}
+.social-icon {
+	height: 3rem;
+	width: 3rem;
+	margin-right: $unit * .25;
+	path {
+		fill: black;
+	}
+}
+
+@media only screen and (min-width: $break-1) {
+
+	/* Hero */
+	body.index {
+		.hero {
+			height: 45.5vw;
+			h1 {
+				font-size: 4.5vw;
+				line-height: 1.2em;
+			}
+			&:after {
+				background-image: url('/images/headers/index/header-sm.png');
+				z-index: -2;
+			}
+		}
+		.page-title {
+			position: fixed;
+			top: calc(15.5vw + 2.8315rem); // Hardcoded header height for now, because Sass processor isn't writing the variable properly inside calc()
+			right: 0;
+			bottom: auto;
+			z-index: -1;
+			h1 {
+				white-space: nowrap;
+				span {
+					text-indent: 13vw;
+				}
+			}
+		}
+	}
+
+	/* Portfolio */
+	.portfolio-list {
+		> ul {
+			display: flex;
+			flex-wrap: wrap;
+			> li {
+				display: flex;
+				width: 50%;
+				> div {
+					display: flex;
+				}
+				a {
+					flex: 1;
+				}
+			}
+		}
+	}
+	.additional-links {
+		display: flex;
+		section {
+			flex: 1;
+			width: 50%;
+		}
+	}
+
+	/* Contact */
+	.contact-info {
+		ul {
+			display: inline-block;
+			vertical-align: middle;
+			padding-bottom: $unit * .5;
+			li {
+				margin: 0;
+			}
+		}
+		.button {
+			padding-top: $unit * .375;
+			padding-bottom: $unit * .375;
+			top: -.25rem
+		}
+	}
+
+}
+
+@media only screen and (min-width: $break-3) {
+
+	/* Hero */
+	body.index {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/index/header-med.png');
+			}
+		}
+	}
+
+	/* Portfolio */
+	.code-sample-list {
+		ul {
+			li {
+				width: 20%;
+			}
+		}
+	}
+
+}
+
+@media only screen and (min-width: $break-4) {
+
+	/* Hero */
+	body.index {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/index/header-lg.png');
+			}
+		}
+	}
+
+}

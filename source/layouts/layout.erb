@@ -1,0 +1,72 @@
+<% # Note: the inline=inline attribute on CSS and script tags lets the inlinesource Gulp task know which scripts to inline. %>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title><%= current_page.data.title || config[:tagline] %> - <%= config[:name] %></title>
+		<meta name="description" content="<%= current_page.data.description || config[:description] %>">
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+		<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+		<link rel="mask-icon" href="favicon.svg" color="#000">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<meta name="msapplication-config" content="/browserconfig.xml">
+		<meta name="apple-mobile-web-app-title" content="<%= config[:name] %>">
+		<meta name="application-name" content="<%= config[:name] %>">
+		<% # Load global CSS on every page %>
+		<%= stylesheet_link_tag "site", :relative => true, :inline => 'inline' %>
+		<% # Load page-specific scripts %>
+		<% if current_page.data.section == "portfolio" %>
+		<%= stylesheet_link_tag "portfolio", :relative => true, :inline => 'inline' %>
+		<% end %>
+		<% if current_page.data.section == "resume" %>
+		<%= stylesheet_link_tag "resume", :relative => true, :inline => 'inline' %>
+		<% end %>
+		<% if current_page.data.section == "index" %>
+		<%= stylesheet_link_tag "index", :relative => true, :inline => 'inline' %>
+		<% end %>
+	</head>
+	<body class="<%= page_classes %>">
+		<header class="site-header">
+			<h1>
+				<%= link_to config[:name], '/index.html' %>
+			</h1>
+			<p><%= config[:tagline] %></p>
+			<a href="#main-content" class="screen-reader">Skip to main content</a>
+			<nav>
+				<ul>
+					<li><%= link_to 'Portfolio', '/index.html#portfolio', :class => 'nav-portfolio' %></li>
+					<li><%= link_to 'Résumé', '/resume/', :class => 'nav-resume' %></li>
+					<li><%= link_to 'Contact', '/index.html#contact', :class => 'nav-contact' %></li>
+				</ul>
+			</nav>
+		</header>
+		<main id="main-content">
+			<article>
+				<header class="hero">
+					<div class="page-title">
+						<h1><%= current_page.data.headline %></h1>
+					</div>
+				</header>
+				<div class="content-wrapper">
+					<%= yield %>
+				</div>
+			</article>
+		</main>
+		<% # Don't display on Legal page, because it's redundant %>
+		<% if current_page.data.section != "legal" %>
+		<footer class="site-footer">
+			<p>© <%= DateTime.now.strftime('%Y') %> Mark Clifton. <%= link_to 'Legal', '/legal.html' %>.</p>
+			<p>Portfolio design and code samples © their respective owners. Do not reproduce without permission.</p>
+		</footer>
+		<% end %>
+		<% # Load global scripts on every page %>
+		<%= javascript_include_tag "source/fonts", :relative => true, :inline => 'inline' %>
+		<% # Load page-specific scripts %>
+		<% if current_page.data.section == "index" || current_page.data.section == "portfolio" %>
+		<%= javascript_include_tag "source/lazyload", :relative => true, :inline => 'inline' %>
+		<% end %>
+	</body>
+</html>

@@ -1,0 +1,135 @@
+---
+headline: "Design thinker, <span>technology builder</span>"
+section: "index"
+---
+
+<section class="intro">
+	<div class="content-block">
+		<p>Traversing the realms of art direction, visual identity, print, and interactive, for over 20 years I’ve been solving problems at the intersection of design and code. I am currently available for hire, remotely or on site in the <span class="name">Atlanta, GA</span> area.</p>
+	</div>
+</section>
+<section id="portfolio" class="portfolio-list design-portfolio-list">
+	<h2>Portfolio</h2>
+	<%= partial '/partials/portfolio_list' %>
+</section>
+<section class="portfolio-list code-sample-list">
+	<h2>Code samples</h2>
+	<ul>
+		<li>
+			<div>
+				<% link_to 'https://github.com/mark-clifton/portfolio-website' do %>
+					<div class="portfolio-details">
+						<h3>Mark Clifton website</h3>
+						<p>Source code for this website, built with Middleman, Gulp, and Sass.</p>
+					</div>
+				<% end %>
+			</div>
+		</li>
+		<li>
+			<div>
+				<% link_to 'https://github.com/mark-clifton/Portfolio-sample---Beyond-Indigo-Pets' do %>
+					<div class="portfolio-details">
+						<h3>Beyond Indigo Pets home page</h3>
+						<p>HTML template for an agency website home page, built with jQuery and Sass.</p>
+					</div>
+				<% end %>
+			</div>
+		</li>
+		<li>
+			<div>
+				<% link_to 'https://github.com/mark-clifton/Portfolio-sample---Concierge-Mobile-Animal-Hospital' do %>
+					<div class="portfolio-details">
+						<h3>Concierge Mobile Animal Hospital templates</h3>
+						<p>HTML templates for a veterinary website, built with jQuery and Sass.</p>
+					</div>
+				<% end %>
+			</div>
+		</li>
+		<li>
+			<div>
+				<% link_to 'https://codepen.io/phasespace/pen/OWqVbm' do %>
+					<div class="portfolio-details">
+						<h3>Kitty Empixelimator</h3>
+						<p>An experiment in p5.js that allows a user to use their mouse to draw pixels of various sizes and shapes on an image.</p>
+					</div>
+				<% end %>
+			</div>
+		</li>
+		<li>
+			<div>
+				<% link_to 'https://github.com/mark-clifton/Processing-video-pixelation-experiments' do %>
+					<div class="portfolio-details">
+						<h3>Webcam pixelation</h3>
+						<p>Simple Processing sketches that render live video input into mosaics of non-square pixels.</p>
+					</div>
+				<% end %>
+			</div>
+		</li>
+	</ul>
+</section>
+<div class="additional-links">
+	<section>
+		<h2>Articles</h2>
+		<ul>
+			<li>
+				<h3><%= link_to '10 Veterinary Website Must-Haves', 'https://www.beyondindigopets.com/blog/10-veterinary-website-must-haves/' %></h3>
+				<p>Beyond Indigo Pets (January 13, 2017)</p>
+			</li>
+			<li>
+				<h3><%= link_to 'The Background On Video Backgrounds', 'https://www.beyondindigopets.com/blog/the-background-on-video-backgrounds/' %></h3>
+				<p>Beyond Indigo Pets (May 26, 2015)</p>
+			</li>
+			<li>
+				<h3><%= link_to 'Introducing Content Blocks: Content Tuned for the Modern Web', 'https://www.beyondindigopets.com/blog/introducing-content-blocks-content-tuned-for-the-modern-web/' %></h3>
+				<p>Beyond Indigo Pets (April 20, 2015)</p>
+			</li>
+		</ul>
+	</section>
+	<section>
+		<h2>&c.</h2>
+		<ul>
+			<li>
+				<h3><%= link_to 'Penrose tile coasters', 'https://www.ponoko.com/showroom/PhaseSpaceDesign/products' %></h3>
+				<p>A set of acrylic coasters, laser cut and engraved into the shapes of Penrose tiles. Available for purchase.</p>
+			</li>
+			<li>
+				<h3><%= link_to 'Sucubus font family', 'https://philsfonts.com/index.php/fonts/overview/GF038001X1' %></h3>
+				<p>A pair of grunge fonts created in the mid-’90s and distributed by GarageFonts (now Phil’s Fonts). Available for purchase.</p>
+			</li>
+		</ul>
+	</section>
+</div>
+<section id="contact">
+	<div class="contact-info">
+		<div class="content-block">
+			<h2>Contact</h2>
+			<ul>
+				<li>
+					<% link_to config[:emaillink], :class => 'button' do %>
+						<%= partial '/partials/icons/email' %>
+						<%= config[:email] %>
+					<% end %>
+				</li>
+			</ul>
+			<ul class="social">
+				<li>
+					<% link_to config[:linkedin], :title => 'LinkedIn' do %>
+						<%= partial '/partials/icons/linkedin' %>
+					<% end %>
+				</li>
+				<li>
+					<% link_to config[:github], :title => 'GitHub' do %>
+						<%= partial '/partials/icons/github' %>
+					<% end %>
+				</li>
+				<li>
+					<% link_to config[:codepen], :title => 'CodePen' do %>
+						<%= partial '/partials/icons/codepen' %>
+					<% end %>
+				</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<% # Schema.org JSON all on one line because the HTML minifyer doesn't process it %>
+<script type="application/ld+json"> { "@context": "http://schema.org", "@type": "Person", "givenName": "Mark", "familyName": "Clifton", "url": "<%= config[:host] %>", "image": "<%= config[:host] %>images/Mark-Clifton.svg", "address": { "@type": "PostalAddress", "addressLocality": "<%= config[:city] %>", "addressRegion": "<%= config[:state] %>", "addressCountry": "<%= config[:country] %>" }, "email": "<%= config[:email] %>", "description": "<%= config[:description] %>", "alumniOf": { "@type": "CollegeOrUniversity", "name": "Virginia Commonwealth University" }, "sameAs": [ "<%= config[:linkedin] %>", "<%= config[:github] %>", "<%= config[:codepen] %>" ] }</script>
