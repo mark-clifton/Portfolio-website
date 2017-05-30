@@ -11,7 +11,7 @@
     "website"
   ],
   "author": "Mark Clifton",
-  "license": "MIT",
+  "license": "(C) Mark Clifton, all rights reserved",
   "devDependencies": {
     "gulp-uncss": "^1.0.6"
   }
