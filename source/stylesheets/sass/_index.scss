@@ -239,6 +239,9 @@ body.index {
 	/* Hero */
 	body.index {
 		.hero {
+			h1 {
+				padding-right: $unit * 2;
+			}
 			&:after {
 				background-image: url('/images/headers/index/header-med.png');
 			}
