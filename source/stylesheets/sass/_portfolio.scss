@@ -130,6 +130,13 @@
 			}
 		}
 	}
+	.portfolio_tags-pet-care-club {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/tags/header-sm.jpg');
+			}
+		}
+	}
 
 	/* Project overview */
 	.project-overview {
@@ -191,6 +198,7 @@
 				}
 				.button {
 					display: block;
+					margin-right: 0;
 				}
 			}
 		}
@@ -254,6 +262,13 @@
 		.hero {
 			&:after {
 				background-image: url('/images/headers/concierge-mobile-animal-hospital/header-med.jpg');
+			}
+		}
+	}
+	.portfolio_tags-pet-care-club {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/tags/header-med.jpg');
 			}
 		}
 	}
@@ -330,6 +345,13 @@
 		.hero {
 			&:after {
 				background-image: url('/images/headers/concierge-mobile-animal-hospital/header-lg.jpg');
+			}
+		}
+	}
+	.portfolio_tags-pet-care-club {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/tags/header-lg.jpg');
 			}
 		}
 	}
