@@ -63,7 +63,8 @@ end
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 # Ignore files
-ignore 'portfolio/samples/*'
+# Archived pages to be 'deleted' from build
+ignore 'portfolio/rosevine-winery.html'
 
 # Gulp external pipeline
 activate :external_pipeline,
