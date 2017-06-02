@@ -10,9 +10,15 @@
 	}
 	.position-details, .education-details, .recognition-details {
 		margin-top: 0;
+		margin-left: 0;
 		padding-left: 0;
 		> li {
 			list-style: none;
+		}
+	}
+	.education-details, .recognition-details {
+		ul {
+			margin-left: -1.125em;
 		}
 	}
 	.position-details {
@@ -41,7 +47,8 @@
 	}
 	.recognition-details {
 		ul {
-			margin: 0;
+			margin-top: 0;
+			margin-bottom: 0;
 		}
 	}
 }
