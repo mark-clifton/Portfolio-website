@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="160px" height="160px" viewBox="0 0 160 160" style="enable-background:new 0 0 160 160;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);fill:#FFFFFF;}
+	.st1{clip-path:url(#SVGID_2_);fill:none;stroke:#000000;stroke-width:11.8518;stroke-miterlimit:10;}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="0" y="0" transform="matrix(-1 -4.490642e-11 4.490642e-11 -1 160 160)" width="160" height="160"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<rect x="0" y="0" transform="matrix(-1 -4.490642e-11 4.490642e-11 -1 160 160)" class="st0" width="160" height="160"/>
+	<line class="st1" x1="219.26" y1="112.6" x2="59.26" y2="-47.4"/>
+	<line class="st1" x1="160" y1="160" x2="0" y2="0"/>
+	<line class="st1" x1="100.74" y1="207.4" x2="-59.26" y2="47.4"/>
+	<line class="st1" x1="183.68" y1="130.39" x2="23.68" y2="-29.61"/>
+	<line class="st1" x1="136.32" y1="189.61" x2="-23.68" y2="29.61"/>
+</g>
+</svg>

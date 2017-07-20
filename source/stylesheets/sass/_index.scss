@@ -8,6 +8,9 @@ body.index {
 		}
 	}
 }
+#pattern {
+	display: none;
+}
 
 /* Intro */
 .intro {
@@ -165,13 +168,13 @@ body.index {
 	/* Hero */
 	body.index {
 		.hero {
-			height: 45.5vw;
+			height: 43.75vw;
 			h1 {
 				font-size: 4.5vw;
 				line-height: 1.2em;
 			}
 			&:after {
-				background-image: url('/images/headers/index/header-sm.gif');
+				background-image: none;
 				z-index: -2;
 			}
 		}
@@ -188,6 +191,39 @@ body.index {
 				}
 			}
 		}
+	}
+	#pattern {
+		display: block;
+	}
+	.tile {
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 6.25vw;
+		width: 6.25%;
+		float: left;
+		opacity: 0;
+		transition: opacity .2s;
+	}
+	/* Make background of ranges of tiles white */
+	.blank-tile, .tile:nth-child(n+38):nth-child(-n+48), .tile:nth-child(n+54):nth-child(-n+64), .tile:nth-child(n+70):nth-child(-n+80) {
+		background-image: none !important;
+	}
+	.tile:nth-child(17) {
+		clear: left; /* Start new row after 16 tiles */
+	}
+	.tile-visible {
+		opacity: 1;
+	}
+	.tile-hidden {
+		opacity: 0;
+	}
+	@for $i from 0 through 28 {
+		.tile-#{$i} {
+			background-image: url('/images/pattern/tile-#{$i}.svg');
+		}
+	}
+	.tile-29 {
+		background-image: none;
 	}
 
 	/* Portfolio */
@@ -243,9 +279,18 @@ body.index {
 			h1 {
 				padding-right: $unit * 2;
 			}
-			&:after {
-				background-image: url('/images/headers/index/header-med.gif');
-			}
+		}
+	}
+
+	/* Intro */
+	.intro {
+		.content-block {
+			padding-top: $unit * 2;
+			padding-bottom: $unit * 2;
+		}
+		h2 {
+			font-size: $level-2;
+			line-height: $unit * 2;
 		}
 	}
 
@@ -254,19 +299,6 @@ body.index {
 		ul {
 			li {
 				width: 33.333333%;
-			}
-		}
-	}
-
-}
-
-@media only screen and (min-width: $break-4) {
-
-	/* Hero */
-	body.index {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/index/header-lg.gif');
 			}
 		}
 	}

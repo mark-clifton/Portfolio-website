@@ -45,7 +45,7 @@
 		</header>
 		<main id="main-content">
 			<article>
-				<header class="hero">
+				<header class="hero" id="hero">
 					<div class="page-title">
 						<h1><%= current_page.data.headline %></h1>
 					</div>
@@ -67,6 +67,9 @@
 		<% # Load page-specific scripts %>
 		<% if current_page.data.section == "index" || current_page.data.section == "portfolio" %>
 		<%= javascript_include_tag "source/lazyload", :relative => true, :inline => 'inline' %>
+		<% end %>
+		<% if current_page.data.section == "index" %>
+		<%= javascript_include_tag "source/hero", :relative => true, :inline => 'inline' %>
 		<% end %>
 		<% if build? %>
 			<% # Google Analytics %>
