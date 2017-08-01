@@ -1,7 +1,5 @@
-/* Global vars */
 var totalTiles = 112;
 var numberClasses = 29;
-var blankTiles = 16;
 var tileNumbers = [];
 var randomTiles = [];
 /* Create grid of tiles */
