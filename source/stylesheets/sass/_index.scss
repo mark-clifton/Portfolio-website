@@ -202,7 +202,7 @@ body.index {
 		width: 6.25%;
 		float: left;
 		opacity: 0;
-		transition: opacity .2s;
+		transition: opacity .5s;
 	}
 	/* Make background of ranges of tiles white */
 	.blank-tile, .tile:nth-child(n+38):nth-child(-n+48), .tile:nth-child(n+54):nth-child(-n+64), .tile:nth-child(n+70):nth-child(-n+80) {

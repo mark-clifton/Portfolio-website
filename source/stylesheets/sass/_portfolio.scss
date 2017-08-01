@@ -137,6 +137,13 @@
 			}
 		}
 	}
+	.portfolio_vin-angel {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/vin-angel/header-sm.jpg');
+			}
+		}
+	}
 
 	/* Project overview */
 	.project-overview {
@@ -272,6 +279,13 @@
 			}
 		}
 	}
+	.portfolio_vin-angel {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/vin-angel/header-med.jpg');
+			}
+		}
+	}
 
 	/* Project details */
 	.img-full {
@@ -352,6 +366,13 @@
 		.hero {
 			&:after {
 				background-image: url('/images/headers/tags/header-lg.jpg');
+			}
+		}
+	}
+	.portfolio_vin-angel {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/vin-angel/header-lg.jpg');
 			}
 		}
 	}
