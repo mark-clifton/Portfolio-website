@@ -144,6 +144,13 @@
 			}
 		}
 	}
+	.portfolio_lettuce-meal-prep {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/lettuce-meal-prep/header-sm.jpg');
+			}
+		}
+	}
 
 	/* Project overview */
 	.project-overview {
@@ -286,6 +293,13 @@
 			}
 		}
 	}
+	.portfolio_lettuce-meal-prep {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/lettuce-meal-prep/header-med.jpg');
+			}
+		}
+	}
 
 	/* Project details */
 	.img-full {
@@ -373,6 +387,13 @@
 		.hero {
 			&:after {
 				background-image: url('/images/headers/vin-angel/header-lg.jpg');
+			}
+		}
+	}
+	.portfolio_lettuce-meal-prep {
+		.hero {
+			&:after {
+				background-image: url('/images/headers/lettuce-meal-prep/header-lg.jpg');
 			}
 		}
 	}

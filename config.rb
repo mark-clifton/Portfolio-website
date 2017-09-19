@@ -66,6 +66,7 @@ end
 # Archived pages to be 'deleted' from build
 ignore 'portfolio/rosevine-winery.html'
 ignore 'portfolio/tropical-floors-and-doors.html'
+ignore 'portfolio/tags-pet-care-club.html'
 
 # Gulp external pipeline
 activate :external_pipeline,
