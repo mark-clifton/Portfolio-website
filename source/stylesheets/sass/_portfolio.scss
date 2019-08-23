@@ -1,3 +1,5 @@
+/* Hero */
+
 /* Project overview */
 .project-overview {
 	border-bottom: solid medium black;
@@ -20,17 +22,23 @@
 	ul, p {
 		padding-left: 4.5rem + ($unit * .5);
 	}
-	li {
-		display: inline;
-		list-style: none;
-		&:after {
-			content: ', ';
-			display: inline;
+	ul {
+		li {
+			list-style: none;
 		}
-		&:last-child {
-			&:after {
-				content: '';
-				display: none;
+		&:not(.awards) {
+			li {
+				display: inline;
+				&:after {
+					content: ', ';
+					display: inline;
+				}
+				&:last-child {
+					&:after {
+						content: '';
+						display: none;
+					}
+				}
 			}
 		}
 	}
@@ -73,89 +81,12 @@
 
 @media only screen and (min-width: $break-1) {
 
-	/* Hero */
-	.portfolio_beyond-indigo {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/beyond-indigo/header-sm.jpg');
-			}
-		}
-	}
-	.portfolio_the-lawrence {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/the-lawrence/header-sm.jpg');
-			}
-		}
-	}
-	.portfolio_credant {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/credant/header-sm.jpg');
-			}
-		}
-	}
-	.portfolio_cardo {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/cardo/header-sm.jpg');
-			}
-		}
-	}
-	.portfolio_wako-diagnostics {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/wako-diagnostics/header-sm.jpg');
-			}
-		}
-	}
-	.portfolio_tropical-floors-and-doors {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/tropical-floors-and-doors/header-sm.jpg');
-			}
-		}
-	}
-	.portfolio_rosevine-winery {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/rosevine-winery/header-sm.jpg');
-			}
-		}
-	}
-	.portfolio_concierge-mobile-animal-hospital {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/concierge-mobile-animal-hospital/header-sm.jpg');
-			}
-		}
-	}
-	.portfolio_tags-pet-care-club {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/tags/header-sm.jpg');
-			}
-		}
-	}
-	.portfolio_vin-angel {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/vin-angel/header-sm.jpg');
-			}
-		}
-	}
-	.portfolio_lettuce-meal-prep {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/lettuce-meal-prep/header-sm.jpg');
-			}
-		}
-	}
-
 	/* Project overview */
 	.project-overview {
-		li {
-			white-space: nowrap;
+		ul:not(.awards) {
+			li {
+				white-space: nowrap;
+			}
 		}
 	}
 
@@ -222,85 +153,6 @@
 
 @media only screen and (min-width: $break-3) {
 
-	/* Hero */
-	.portfolio_beyond-indigo {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/beyond-indigo/header-med.jpg');
-			}
-		}
-	}
-	.portfolio_the-lawrence {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/the-lawrence/header-med.jpg');
-			}
-		}
-	}
-	.portfolio_credant {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/credant/header-med.jpg');
-			}
-		}
-	}
-	.portfolio_cardo {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/cardo/header-med.jpg');
-			}
-		}
-	}
-	.portfolio_wako-diagnostics {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/wako-diagnostics/header-med.jpg');
-			}
-		}
-	}
-	.portfolio_tropical-floors-and-doors {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/tropical-floors-and-doors/header-med.jpg');
-			}
-		}
-	}
-	.portfolio_rosevine-winery {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/rosevine-winery/header-med.jpg');
-			}
-		}
-	}
-	.portfolio_concierge-mobile-animal-hospital {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/concierge-mobile-animal-hospital/header-med.jpg');
-			}
-		}
-	}
-	.portfolio_tags-pet-care-club {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/tags/header-med.jpg');
-			}
-		}
-	}
-	.portfolio_vin-angel {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/vin-angel/header-med.jpg');
-			}
-		}
-	}
-	.portfolio_lettuce-meal-prep {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/lettuce-meal-prep/header-med.jpg');
-			}
-		}
-	}
-
 	/* Project details */
 	.img-full {
 		margin-right: $unit * -3;
@@ -313,89 +165,6 @@
 	.img-left {
 		margin-right: $unit * -1;
 		left: $unit * -3;
-	}
-
-}
-
-@media only screen and (min-width: $break-4) {
-
-	/* Hero */
-	.portfolio_beyond-indigo {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/beyond-indigo/header-lg.jpg');
-			}
-		}
-	}
-	.portfolio_the-lawrence {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/the-lawrence/header-lg.jpg');
-			}
-		}
-	}
-	.portfolio_credant {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/credant/header-lg.jpg');
-			}
-		}
-	}
-	.portfolio_cardo {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/cardo/header-lg.jpg');
-			}
-		}
-	}
-	.portfolio_wako-diagnostics {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/wako-diagnostics/header-lg.jpg');
-			}
-		}
-	}
-	.portfolio_tropical-floors-and-doors {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/tropical-floors-and-doors/header-lg.jpg');
-			}
-		}
-	}
-	.portfolio_rosevine-winery {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/rosevine-winery/header-lg.jpg');
-			}
-		}
-	}
-	.portfolio_concierge-mobile-animal-hospital {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/concierge-mobile-animal-hospital/header-lg.jpg');
-			}
-		}
-	}
-	.portfolio_tags-pet-care-club {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/tags/header-lg.jpg');
-			}
-		}
-	}
-	.portfolio_vin-angel {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/vin-angel/header-lg.jpg');
-			}
-		}
-	}
-	.portfolio_lettuce-meal-prep {
-		.hero {
-			&:after {
-				background-image: url('/images/headers/lettuce-meal-prep/header-lg.jpg');
-			}
-		}
 	}
 
 }

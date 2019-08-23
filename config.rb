@@ -67,6 +67,8 @@ end
 ignore 'portfolio/rosevine-winery.html'
 ignore 'portfolio/tropical-floors-and-doors.html'
 ignore 'portfolio/tags-pet-care-club.html'
+ignore 'portfolio/the-lawrence.html'
+ignore 'portfolio/concierge-mobile-animal-hospital.html'
 
 # Gulp external pipeline
 activate :external_pipeline,

@@ -310,15 +310,17 @@ main {
 	}
 
 	/* Hero */
-	.hero {
-		height: 13vw;
-		&:after { // Hero fixed-position background image
-			content: '';
-			background: url('/images/headers/default/header-sm.png') no-repeat center top;
+	body:not(.index) {
+		.hero {
+			height: 13vw;
+			background-color: black;
+			background-image: url('/images/headers/default/header-sm.png');
+			background-repeat: no-repeat;
+			background-position: center top;
 			background-size: cover;
 		}
 	}
-	.hero:after, #pattern {
+	#pattern {
 		width: 100%;
 		height: inherit;
 		position: fixed;
@@ -381,10 +383,12 @@ main {
 	}
 
 	/* Hero */
-	.hero {
-		&:after {
+	body:not(.index) {
+		.hero {
 			background-image: url('/images/headers/default/header-med.png');
 		}
+	}
+	.hero {
 		h1 {
 			font-size: $level-2;
 			line-height: $unit * 2;
@@ -396,8 +400,8 @@ main {
 @media only screen and (min-width: $break-4) {
 
 	/* Hero */
-	.hero {
-		&:after {
+	body:not(.index) {
+		.hero {
 			background-image: url('/images/headers/default/header-lg.png');
 		}
 	}

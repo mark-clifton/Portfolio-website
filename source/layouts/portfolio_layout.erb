@@ -1,21 +1,31 @@
 <% wrap_layout :layout do %>
 <header class="project-overview">
-	<section class="context">
-		<h2>Agency</h2>
+	<section aria-labelled-by="#agency">
+		<h2 id="agency">Agency</h2>
 		<p><%= current_page.data.agency %></p>
 	</section>
-	<section class="roles">
-		<h2>Roles</h2>
+	<section aria-labelled-by="#roles">
+		<h2 id="roles">Roles</h2>
 		<ul>
 			<% current_page.data.roles.each do |f| %>
 			<li><%= f %></li>
 			<% end %>
 		</ul>
 	</section>
-	<section class="context">
-		<h2>Period</h2>
+	<section aria-labelled-by="#period">
+		<h2 id="period">Period</h2>
 		<p><%= current_page.data.years %></p>
 	</section>
+	<% if current_page.data.awards %>
+	<section aria-labelled-by="#awards">
+		<h2 id="awards">Awards</h2>
+		<ul class="awards">
+			<% current_page.data.awards.each do |f| %>
+			<li><%= f %></li>
+			<% end %>
+		</ul>
+	</section>
+	<% end %>
 </header>
 <%= yield %>
 <%= partial '/partials/pagination' %>
