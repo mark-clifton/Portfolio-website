@@ -28,7 +28,7 @@ function predicate(elem) {
 	}
 	return false;
 }
-gulp.task('removeattributes', function () {
+gulp.task('removeattributes', async function () {
 	"use strict";
 	gulp.src('build/**/*.html')
 		.pipe(attrremover('style', 'inline', predicate))

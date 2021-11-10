@@ -58,7 +58,7 @@
 		<% # Don't display on Legal page, because it's redundant %>
 		<% if current_page.data.section != "legal" %>
 		<footer class="site-footer">
-			<p>© <%= DateTime.now.strftime('%Y') %> Mark Clifton. <%= link_to 'Legal', '/legal.html' %>.</p>
+			<p>© 2017–<%= DateTime.now.strftime('%Y') %> Mark Clifton. <%= link_to 'Legal', '/legal.html' %>.</p>
 			<p>Portfolio design and code samples © their respective owners. Do not reproduce without permission.</p>
 		</footer>
 		<% end %>
