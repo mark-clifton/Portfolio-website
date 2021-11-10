@@ -1,6 +1,6 @@
 {
   "name": "mark-clifton-portfolio",
-  "version": "1.0.0",
+  "version": "1.0",
   "description": "Personal portfolio website of Mark Clifton.",
   "main": "gulpfile.js",
   "scripts": {
@@ -14,5 +14,11 @@
   "license": "(C) Mark Clifton, all rights reserved",
   "devDependencies": {
     "gulp-uncss": "^1.0.6"
+  },
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-attr-remover": "^0.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-inline-source": "^4.0.0"
   }
 }

@@ -37,4 +37,4 @@ gulp.task('removeattributes', function () {
 });
 
 // Default tasks
-gulp.task('default', ['scripts']);
+gulp.task('default', gulp.series('scripts'));

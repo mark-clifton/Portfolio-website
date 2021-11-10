@@ -85,7 +85,7 @@ end
 configure :build do
 	activate :minify_html
 	config[:host] = "https://mark-clifton.com/"
-	config[:description] = "An art director and full-stack designer residing in Atlanta, GA, with 20+ years of experience in interactive, print, and branding."
+	config[:description] = "An art director and full-stack designer residing in Atlanta, GA, with 25+ years of experience in interactive, print, and branding."
 	config[:name] = "Mark Clifton"
 	config[:tagline] = "Art director & full-stack designer"
 	config[:email] = "mark@mark-clifton.com"
