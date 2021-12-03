@@ -170,9 +170,6 @@ header, nav {
 		white-space: nowrap;
 		padding: ($unit * .25) 0 ($unit * .25) $unit;
 	}
-	p {
-		display: none;
-	}
 	a {
 		border-bottom: none;
 	}
@@ -304,6 +301,8 @@ main {
 		nav {
 			flex: 1;
 			justify-content: flex-end;
+			padding-left: ($unit * 2);
+			padding-right: 0;
 		}
 	}
 
@@ -357,13 +356,8 @@ main {
 
 	/* Header */
 	.site-header {
-		p {
-			font-size: $level-neg-1;
-			line-height: $unit;
-			font-weight: $bold;
-			display: block;
-			white-space: nowrap;
-			padding: ($unit * .35) $unit 0 $unit;
+		nav {
+			padding-left: ($unit * 4);
 		}
 	}
 
@@ -374,7 +368,6 @@ main {
 	/* Header */
 	.site-header {
 		nav {
-			padding: 0;
 			ul {
 				li {
 					a {
